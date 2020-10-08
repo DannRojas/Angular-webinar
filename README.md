@@ -3,7 +3,7 @@ ___
 
 Lo primero que veremos luego de una pequeña introducción serán las:
 
-##Instalaciones Necesarias
+## Instalaciones Necesarias
 
 **1.-** La primera instalación necesaria es **NodeJS**
 Puedes descargarla e instalarla haciendo click sobre el siguiente [enlace.](https://nodejs.org/es/download/)
