@@ -1,4 +1,4 @@
-#¡Bienvenido al Webinar de Angular!
+# ¡Bienvenido al Webinar de Angular!
 ___
 
 Lo primero que veremos luego de una pequeña introducción serán las:
@@ -37,11 +37,11 @@ Podrás comprobar su versión con el siguiente comando
 
     ng --version
 ___
-###Extras
+### Extras
 
 Nó es obligatorio pero se recomienda utilizar el edtitor de texto [VSCode](https://code.visualstudio.com), podrás descargarlo haciendo (click) sobre el siguiente [enlace](https://code.visualstudio.com/download).
 
-#####También se recomienda instalar las siguientes extensiones:
+##### También se recomienda instalar las siguientes extensiones:
 
 1. Angular 2 TypeScript Emmet
 2. Angular Language Service
