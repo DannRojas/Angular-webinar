@@ -24,6 +24,10 @@ function resultadoDoble( a, b ){
   return (a + b) * 2
 }
 
+let resultadoDoble1 = (a, b)=>{
+  return (a*b)*2;
+}
+
 
 // Función con parametros obligatorios, opcionales y por defecto
 // donde NOMBRE = obligatorio
