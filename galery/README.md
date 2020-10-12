@@ -1,27 +1,39 @@
-# Galery
+## Bienvenido a tu primer proyecto con Angular
+___
+### Estructura MVC
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
+![Ejecutar como administrador](./src/assets/png/MVCAngular.png)
 
-## Development server
+### Arquitectura y funcionamiento
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+![Ejecutar como administrador](./src/assets/png/ArchitectureAngular.png)
+___
 
-## Code scaffolding
+Una véz hayan quedado claros los conceptos ejecutamos el siguiente comanco en una terminal ubicada dentro del proyecto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    ng g p pipes/filter
 
-## Build
+Lo que hará es generar un pipe de la carpeta pipes, que utilizaremos para hacer búsquedas
+___
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Lo que sigue ahora es instalar [Angular_Material](https://material.angular.io/) utilizando el siguiente comando
 
-## Running unit tests
+    ng add @angular/material
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Una vez se haya instalado, crearemos un archivo llamado **material.ts**
+dentro de la carpeta **app** y dentro de este archivo typearemos el siguiente código
 
-## Running end-to-end tests
+```ts
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+const myModule = [];
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+@NgModule({
+  declarations: [],
+  imports: [CommonModule, myModule],
+  exports: [ myModule ]
+})
+export class MaterialModule { }
+```
+**Ahora sí estamos listos para trabajar, ¡manos a la obra!**
