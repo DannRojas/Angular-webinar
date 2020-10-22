@@ -1,5 +1,6 @@
 export interface PublicationInterface{
+  id?: string;
   title?: string;
-  imegenPath?: string;
+  imagePath?: string;
   description?: string;
 }

@@ -1,25 +1,33 @@
 <div class="container mt-5">
   <div class="row">
-    <div class="card w-100">
+    <div class="card col-8 mx-auto">
       <div class="card-body">
         <div class="card-title">
           <h5 class="font-weight-bold">Nueva publicacion</h5>
         </div>
         <form (ngSubmit)="onAddOrUpdate()" #publicationForm="ngForm">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Titulo</label>
-            <input type="text" class="form-control" id="title" name="title" [(ngModel)]="publication.title">
-            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Imagen URL</label>
-            <input type="text" class="form-control" name="imagePath" id="exampleInputPassword1" [(ngModel)]="publication.imegenPath">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">description</label>
-            <input type="text" class="form-control" name="description" id="exampleInputPassword1" [(ngModel)]="publication.description">
-          </div>
-          <button type="submit" class="btn btn-primary">Enviar</button>
+          <mat-form-field class="example-full-width w-100">
+            <mat-label>Titulo</mat-label>
+            <input matInput placeholder="Titulo" name="title" [(ngModel)]="publication.title" #title="ngModel" required>
+            <mat-error *ngIf="title.invalid">
+              El título es requerido
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="example-full-width w-100">
+            <mat-label>Imagen URL</mat-label>
+            <input matInput placeholder="Imagen URL" name="imagePath" [(ngModel)]="publication.imagePath" #imagePath="ngModel" required>
+            <mat-error *ngIf="imagePath.invalid">
+              La URL de la imagen es requerida
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="example-full-width w-100">
+            <mat-label>Descripción</mat-label>
+            <input matInput placeholder="Descripción" name="description" [(ngModel)]="publication.description" #description="ngModel" required>
+            <mat-error *ngIf="description.invalid">
+              La descripción es requerida
+            </mat-error>
+          </mat-form-field>
+          <button type="submit" mat-raised-button color="primary" [disabled]="publicationForm.invalid">Enviar</button>
         </form>
       </div>
     </div>
